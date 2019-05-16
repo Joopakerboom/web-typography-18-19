@@ -1,5 +1,7 @@
 var playButton = document.querySelector('header button');
 var header = document.querySelector('header');
+var headerSection1 = document.querySelector('header section:nth-of-type(1)');
+var headerSection2 = document.querySelector('header section:nth-of-type(2)');
 
 var player;
 
@@ -10,7 +12,8 @@ function onYouTubeIframeAPIReady() {
 		videoId: 'yXtHqvMUSFg',
 		playerVars: {
 			color: 'white',
-            start: 80
+            start: 80,
+            end: 148
 			//autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 		},
@@ -22,7 +25,9 @@ function onYouTubeIframeAPIReady() {
     playButton.addEventListener('click', 
     function() {
         player.playVideo();
-        header.style.display = 'none';
+        header.classList.add("headerdisappear1");
+        headerSection1.classList.add("headerdisappear2");
+        headerSection2.classList.add("headerdisappear2");
     }
 );
 
@@ -49,9 +54,6 @@ function addSpans(){
 	updateTimerDisplay();
 }
 
-// in de while look een check of het text of img is, eerst console log hoeveel img
-// ongeacht laat je gewoon de img zien
-
 function updateTimerDisplay(){
 	var t = player.getCurrentTime();
 	t = Math.floor10(t,-1);
@@ -70,7 +72,7 @@ function updateTimerDisplay(){
 		i++;
 	}
 
-	if ( t < 136.1) {
+	if ( t < 274.1) {
 		setTimeout(() => {
 			updateTimerDisplay();
 		}, 100);
