@@ -13,12 +13,12 @@ sounds = [
     102, //sound8 whirring
     112, //sound9 old film
     114.5, //sound10 bullet falling
-    116, //sound 11 whirring
-    117.5, //sound 12 whirring x8
+    116.5, //sound 11 whirring
+    117.8, //sound 12 whirring x8
     120, //sound 13 passing
     121, //sound 14 animal
     130, //sound 15 bliepbliep
-    141, //sound 16 chargeset
+    141.5, //sound 16 chargeset
     142, //sound 17 chargewirring
     144.5, //sound 18 boom
     161, //sound 19 chargeset

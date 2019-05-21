@@ -329,6 +329,34 @@ Feel free to adjust the defaults to your needs.
     position: absolute;
 }
 
+@keyframes rotatesnd0-1 {
+ 0% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+    
+    100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes rotatesnd0-2 {
+ 0% {
+    transform: rotate(60deg);
+  }
+
+  50% {
+    transform: rotate(70deg);
+  }
+    
+    100% {
+    transform: rotate(60deg);
+  }
+}
+
 #closed-captions > section > .snd0 h3 {
     color: white;
     padding-bottom: 2rem;
@@ -336,6 +364,80 @@ Feel free to adjust the defaults to your needs.
 
 #closed-captions > section > .snd0 h3:nth-of-type(2) {
     padding-left: 10rem;
+}
+
+#closed-captions > section > .snd0 h3:nth-of-type(1)::after {
+        content: url(../images/Thunder-white.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: -1rem;
+    left: 6.5rem;
+    transform: rotate(-20deg);
+    transform-origin: center;
+    
+    animation-duration: .1s;
+    animation-name: rotatesnd0-1;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+#closed-captions > section > .snd0 h3:nth-of-type(2)::after {
+        content: url(../images/Thunder-extra-white.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: 0rem;
+    left: 12rem;
+    transform: rotate(60deg);
+    transform-origin: center;
+    
+    animation-duration: .2s;
+    animation-name: rotatesnd0-2;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes rotatesnd1-1 {
+ 0% {
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+    
+    100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes rotatesnd1-2 {
+ 0% {
+    transform: rotate(-120deg);
+  }
+
+  50% {
+    transform: rotate(-110deg);
+  }
+    
+    100% {
+    transform: rotate(-120deg);
+  }
+}
+
+@keyframes rotatesnd1-3 {
+ 0% {
+    transform: rotate(-60deg);
+  }
+
+  50% {
+    transform: rotate(-70deg);
+  }
+    
+    100% {
+    transform: rotate(-60deg);
+  }
 }
 
 #closed-captions > section > div:nth-of-type(2) > div h3 {
@@ -361,12 +463,94 @@ Feel free to adjust the defaults to your needs.
     color: white;
 }
 
+#closed-captions > section > div:nth-of-type(2) .snd1::after {
+        content: url(../images/Thunder-extra-yellow.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: -3rem;
+    left: 21rem;
+    transform: rotate(-30deg);
+    transform-origin: center;
+    
+    animation-duration: .2s;
+    animation-name: rotatesnd1-1;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.snd2 h3 {
+    font-size: 6rem;
+}
+
+#closed-captions > section > div:nth-of-type(2) .snd2::after {
+        content: url(../images/Thunder-extra-yellow.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: 6rem;
+    left: 29rem;
+    transform: rotate(-120deg);
+    transform-origin: center;
+    
+    animation-duration: .2s;
+    animation-name: rotatesnd1-2;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+#closed-captions > section > div:nth-of-type(2) .snd2 span::after {
+    content: url(../images/Extratriangle-yellow.svg);
+    width: 1.5rem;
+    position: absolute;
+    top: -1rem;
+    left: 26rem;
+    transform: rotate(-60deg);
+    transform-origin: center;
+    
+    animation-duration: .1s;
+    animation-name: rotatesnd1-3;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
 .snd3 {
     color: white;
 }
 
+@keyframes rotatesnd4-1 {
+ 0% {
+    transform: rotate(-100deg);
+  }
+
+  50% {
+    transform: rotate(-110deg);
+  }
+    
+    100% {
+    transform: rotate(-100deg);
+  }
+}
+
 .snd4 {
     color: #FF1921;
+    position: relative;
+}
+
+.snd4::after {
+    content: url(../images/Thunder-extra-rood2.svg);
+    width: 10rem;
+    position: absolute;
+    top: 0.5rem;
+    left: 42rem;
+    transform: rotate(-100deg);
+    transform-origin: center;
+    animation-duration: .1s;
+     animation-name: rotatesnd4-1; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
 }
 
 .snd5 {
@@ -463,6 +647,319 @@ Feel free to adjust the defaults to your needs.
     left: .3rem;
     z-index: -1;
 }
+
+@keyframes snd11rotate {
+ 0% {
+         transform: rotateX(-80deg) rotateY(8deg) rotateZ(0deg);
+  }
+    
+    100% {
+    transform: rotateX(-80deg) rotateY(8deg) rotateZ(-360deg);
+  }
+}
+
+.snd11 h3 {
+    font-family: "Brenner Sans Condensed";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    color: white;
+    transform: rotateX(-80deg) rotateY(8deg) rotateZ(0deg);
+    transform-origin: left;
+    
+    animation-name: snd11rotate;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes snd12rotate {
+ 0% {
+    transform: rotateX(-30deg) rotateY(20deg) rotateZ(0deg);
+  }
+    
+    100% {
+        transform: rotateX(-30deg) rotateY(20deg) rotateZ(-360deg);
+  }
+}
+
+.snd12 h3 {
+        font-family: "Brenner Sans Condensed";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+    transform: rotateX(-30deg) rotateY(20deg) rotateZ(0deg);
+    transform-origin: center;
+    position: absolute;
+    
+    animation-name: snd12rotate;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.snd12 h3:nth-of-type(1) {
+    left: 17%;
+    top: 40%;
+    animation-duration: 1.5s;
+}
+
+.snd12 h3:nth-of-type(2) {
+    left: 35%;
+    top: 16%;
+    animation-duration: 1.7s;
+}
+
+.snd12 h3:nth-of-type(3) {
+        left: 59%;
+    top: 26%;
+    animation-duration: 1.5s;
+}
+
+.snd12 h3:nth-of-type(4) {
+    left: 42%;
+    top: 55%;
+    animation-duration: 1.7s;
+}
+
+.snd12 h3:nth-of-type(5) {
+    left: 70%;
+    top: 69%;
+    animation-duration: 1.5s;
+}
+
+.snd12 h3:nth-of-type(6) {
+        left: 86%;
+    top: 40%;
+    animation-duration: 1.7s;
+}
+
+.snd12 h3:nth-of-type(7) {
+        left: 15%;
+    top: 75%;
+    animation-duration: 1.5s;
+}
+
+.snd13 span {
+    color: transparent;
+    display: inline-block;
+    font-size: 4.5rem;
+    position: relative;
+    margin-right: -2rem
+}
+
+.snd13 span:nth-of-type(1)::after {
+    content: "W";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
+.snd13 span:nth-of-type(2)::after {
+    content: "h";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+.snd13 span:nth-of-type(3)::after,
+.snd13 span:nth-of-type(4)::after,
+.snd13 span:nth-of-type(5)::after, 
+.snd13 span:nth-of-type(6)::after, 
+.snd13 span:nth-of-type(7)::after{
+    content: "o";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
+.snd13 span:nth-of-type(8)::after {
+    content: "s";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
+.snd13 span:nth-of-type(9)::after {
+    content: "h";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
+.snd14 h3 {
+        font-family: "Brenner Sans Condensed";
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.5rem;
+    color: #FCDD4F;
+    transform-origin: center;
+}
+
+.snd14 h3::after {
+    content: "Mehh";
+    color: transparent;
+    position: absolute;
+    top: .3rem;
+    color: white;
+    left: .3rem;
+    z-index: -1;
+}
+
+@keyframes rotatesnd15-1 {
+ 0% {
+    transform: rotate(70deg);
+  }
+
+  50% {
+    transform: rotate(80deg);
+  }
+    
+    100% {
+    transform: rotate(70deg);
+  }
+}
+
+@keyframes rotatesnd15-2 {
+ 0% {
+    transform: rotate(-60deg);
+  }
+
+  50% {
+    transform: rotate(-70deg);
+  }
+    
+    100% {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes rotatesnd15-3 {
+ 0% {
+    transform: rotate(230deg);
+  }
+
+  50% {
+    transform: rotate(240deg);
+  }
+    
+    100% {
+    transform: rotate(230deg);
+  }
+}
+
+.snd15 h3 {
+    font-family: "Brenner Mono";
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: white;
+    transform-origin: center;
+    display: block;
+    letter-spacing: 1rem;
+    padding-bottom: 2rem;
+    opacity: 0;
+    position: relative
+}
+
+.snd15 h3:nth-of-type(2) {
+    font-size: 2rem;
+    color: #0E3A7F;
+}
+
+.snd15 h3:nth-of-type(3) {
+    font-size: 2.5rem;
+}
+
+.snd15 h3:nth-of-type(1)::after {
+        content: url(../images/Thunder-extra-yellow.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: -3rem;
+    left: 8.5rem;
+    transform: rotate(70deg);
+    transform-origin: center;
+    animation-duration: .1s;
+     animation-name: rotatesnd15-1; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out
+}
+
+.snd15 h3:nth-of-type(2)::after {
+    content: url(../images/Thunder-yellow.svg);
+    width: 1.5rem;
+    position: absolute;
+    top: -1rem;
+    left: -2.5rem;
+    transform: rotate(-60deg);
+    transform-origin: center;
+    animation-duration: .2s;
+     animation-name: rotatesnd15-2; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.snd15 h3:nth-of-type(3)::after {
+        content: url(../images/Thunder-extra-yellow.svg);
+    width: 2.5rem;
+    position: absolute;
+    top: 1.5rem;
+    left: -3rem;
+    transform: rotate(230deg);
+    transform-origin: center;
+    animation-duration: .1s;
+     animation-name: rotatesnd15-3; 
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.snd16 h3 {
+    color: white;
+    transform-origin: center;
+    position: relative;
+    padding-right: 15rem;
+    display: inline-block;
+    opacity: 0;
+}
+
+.snd16 h3:nth-of-type(2) {
+    color: #FCDD4F;
+}
+
+.snd16 h3:nth-of-type(1)::after {
+        content: "Prrrri";
+    color: #0E3A7F;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
+.snd16 h3:nth-of-type(2)::after {
+        content: "Prrrri";
+    color: #0E3A7F;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    z-index: -1;
+}
+
 
 .snd17 h3 {
     color: white;
@@ -601,7 +1098,65 @@ Feel free to adjust the defaults to your needs.
     100% {
         top: 45%;
     left: 30%;
-    transform: rotate(-121deg);;
+    transform: rotate(-121deg);
+    }
+}
+
+@keyframes snd13position {
+    0% {
+    top: 50%;
+    left: 25%;
+        transform: rotateX(20deg) rotateY(-15deg) rotateZ(5deg);
+    }
+    
+    100% {
+        top: 40%;
+    left: 30%;
+        transform: rotateX(40deg) rotateY(-30deg) rotateZ(10deg) scale(1.3);
+    }
+}
+
+@keyframes snd13appear {
+    0% {
+    color: transparent;
+    }
+
+    100% {
+    color: #FCDD4F;
+    }
+}
+
+@keyframes snd13appearafter {
+    0% {
+    color: transparent;
+    }
+
+    100% {
+    color: #FF1921;
+    }
+}
+
+@keyframes snd15appear {
+    0% {
+    opacity: 0;
+    }
+
+    100% {
+    opacity: 1;
+    }
+}
+
+@keyframes snd15position {
+    0% {
+    top: 44%;
+    left: 22%;
+    
+    }
+    
+    100% {
+        top: 45%;
+    left: 18%;
+    
     }
 }
 
@@ -640,7 +1195,7 @@ body.sound0 #closed-captions > section .snd0 {
 }
 
 body.sound1 #closed-captions > section .snd1 {
-    top: 20%;
+        top: 25%;
     left: 15%;
     display: block;
     
@@ -653,11 +1208,10 @@ body.sound1 #closed-captions > section .snd1 {
 }
 
 body.sound2 #closed-captions > section .snd2 {
-    top: 55%;
-    left: 8%;
+    top: 60%;
+    left: 10%;
     display: block;
-    
-    transform: rotateX(30deg) rotateY(15deg) rotateZ(-15deg);
+    transform: rotateX(30deg) rotateY(15deg) rotateZ(-20deg);
 
     animation-name: dissapear;
     animation-delay: 1.5s;
@@ -666,27 +1220,27 @@ body.sound2 #closed-captions > section .snd2 {
 }
 
 body.sound3 #closed-captions > section .snd3 {
-    top: 40%;
+    top: 35%;
     left: 20%;
     display: block;
     
     transform: rotateX(10deg) rotateY(-30deg) rotateZ(0deg);
 
     animation-name: dissapear;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
 
 body.sound4 #closed-captions > section .snd4 {
-    top: 70%;
+    top: 65%;
     left: 10%;
     display: block;
     
     transform: rotateX(10deg) rotateY(-30deg) rotateZ(0deg);
 
     animation-name: dissapear;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
@@ -699,7 +1253,7 @@ body.sound5 #closed-captions > section .snd5 {
     transform: rotateX(5deg) rotateY(70deg) rotateZ(0deg);
 
     animation-name: dissapear;
-    animation-delay: 1.5s;
+    animation-delay: 1.2s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
@@ -712,7 +1266,7 @@ body.sound6 #closed-captions > section .snd6 {
     transform: rotateX(10deg) rotateY(40deg) rotateZ(5deg);
 
     animation-name: dissapear;
-    animation-delay: 1.5s;
+    animation-delay: .8s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
@@ -726,7 +1280,7 @@ body.sound7 #closed-captions > section .snd7 {
     transform: rotateX(10deg) rotateY(40deg) rotateZ(10deg);
 
     animation-name: dissapear;
-    animation-delay: 1.5s;
+    animation-delay: .3s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
@@ -736,7 +1290,7 @@ body.sound8 #closed-captions > section .snd8 {
     left: 30%;
     display: block;
     
-    animation: dissapear 0s linear 2.5s, snd8postition 1.5s linear 0s;
+    animation: dissapear 0s linear 2.5s, snd8postition 3s linear 0s;
     animation-fill-mode: forwards;
 }
 
@@ -759,6 +1313,187 @@ body.sound10 #closed-captions > section .snd10 {
     
     animation: dissapear 0s linear 1.5s, snd10position 1.5s linear 0s;
 /*    animation-delay: 1.5s;*/
+    animation-fill-mode: forwards;
+}
+
+body.sound11 #closed-captions > section .snd11 {
+    top: 39%;
+    left: 69%;
+    display: block;
+    
+    animation: dissapear 0s linear 1.3s;
+    animation-fill-mode: forwards;
+}
+
+body.sound12 #closed-captions > section .snd12 {
+    top: 0%;
+    left: 0%;
+        width: 100%;
+    height: 100%;
+    display: block;
+    
+    animation: dissapear 0s linear 1.7s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13{
+    top: 49%;
+    left: 24%;
+    display: block;
+    transform: rotateX(20deg) rotateY(-15deg) rotateZ(5deg);
+    transform-origin: left;
+    
+    animation: dissapear 0s linear 1.5s, snd13position 3s ease-in-out 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(1){
+    animation: snd13appear 0s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(2){
+    animation: snd13appear 0s linear .1s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(3){
+    animation: snd13appear 0s linear .2s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(4){
+    animation: snd13appear 0s linear .3s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(5){
+    animation: snd13appear 0s linear .4s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(6){
+    animation: snd13appear 0s linear .5s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(7){
+    animation: snd13appear 0s linear .6s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(8){
+    animation: snd13appear 0s linear .7s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(9){
+    animation: snd13appear 0s linear .8s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(1)::after{
+    animation: snd13appearafter 0s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(2)::after{
+    animation: snd13appearafter 0s linear .1s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(3)::after{
+    animation: snd13appearafter 0s linear .2s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(4)::after{
+    animation: snd13appearafter 0s linear .3s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(5)::after{
+    animation: snd13appearafter 0s linear .4s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(6)::after{
+    animation: snd13appearafter 0s linear .5s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(7)::after{
+    animation: snd13appearafter 0s linear .6s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(8)::after{
+    animation: snd13appearafter 0s linear .7s;
+    animation-fill-mode: forwards;
+}
+
+body.sound13 #closed-captions > section .snd13 span:nth-of-type(9)::after{
+    animation: snd13appearafter 0s linear .8s;
+    animation-fill-mode: forwards;
+}
+
+body.sound14 #closed-captions > section .snd14 {
+    top: 25%;
+    left: 70%;
+    display: block;
+    transform: rotateX(-20deg) rotateY(10deg) rotateZ(-20deg);
+    transform-origin: left;
+
+    animation: dissapear 0s linear .8s;
+    animation-fill-mode: forwards;
+}
+
+body.sound15 #closed-captions > section .snd15 {
+        top: 44%;
+    left: 22%;
+    display: block;
+    transform: rotateX(-10deg) rotateY(30deg) rotateZ(0deg);
+    transform-origin: left;
+    text-align: center;
+
+    animation: dissapear 0s linear 1s, snd15position 1s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound15 #closed-captions > section .snd15 h3:nth-of-type(1){
+    animation: snd15appear 0s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound15 #closed-captions > section .snd15 h3:nth-of-type(2){
+    animation: snd15appear 0s linear .1s;
+    animation-fill-mode: forwards;
+}
+
+body.sound15 #closed-captions > section .snd15 h3:nth-of-type(3){
+    animation: snd15appear 0s linear .2s;
+    animation-fill-mode: forwards;
+}
+
+
+body.sound16 #closed-captions > section .snd16 {
+    top: 55%;
+    left: 30%;
+    display: block;
+    transform: rotateX(-20deg) rotateY(10deg) rotateZ(-20deg);
+    transform-origin: left;
+
+    animation: dissapear 0s linear .6s;
+    animation-fill-mode: forwards;
+}
+
+body.sound16 #closed-captions > section .snd16 h3:nth-of-type(1){
+    animation: snd15appear 0s linear 0s;
+    animation-fill-mode: forwards;
+}
+
+body.sound16 #closed-captions > section .snd16 h3:nth-of-type(2){
+    animation: snd15appear 0s linear .2s;
     animation-fill-mode: forwards;
 }
 
@@ -830,8 +1565,7 @@ transform: rotate(-70deg);
 
 .foxleader span,
 .foxthree span,
-.victor span,
-.soldier1 span {
+.victor span {
     opacity: 0;
 }
 
@@ -1339,7 +2073,7 @@ transform: rotate(-70deg);
 
 .p6.on span:nth-of-type(1) {
     opacity: 1;
-    transition: 0s;
+    transition: 0s 0s;
     display: inline-block;
     position: relative;
 }
@@ -1355,6 +2089,7 @@ transform: rotate(-70deg);
 
 .p6.on span:nth-of-type(2) {
     opacity: 1;
+    transition: 0s .2s;
     display: inline-block;
     position: relative;
 }
@@ -1370,6 +2105,7 @@ transform: rotate(-70deg);
 
 .p6.on span:nth-of-type(3) {
     opacity: 1;
+    transition: 0s .4s;
     display: block;
         position: relative;
 }
@@ -1386,6 +2122,7 @@ transform: rotate(-70deg);
 
 .p6.on span:nth-of-type(4) {
     opacity: 1;
+    transition: 0s .6s;
     display: inline-block;
     position: relative;
 }
@@ -1401,6 +2138,7 @@ transform: rotate(-70deg);
 
 .p6.on span:nth-of-type(5) {
     opacity: 1;
+    transition: 0s .8s;
     display: inline-block;
     position: relative;
 }
@@ -1419,13 +2157,17 @@ transform: rotate(-70deg);
 @keyframes p7position {
  0% {
     transform: rotate(12deg);
+/*
     top: 26%;
     left: 71%;
+*/
   }
     
     100% {
-    top: 41%;
-    left: 74%;
+/*
+    top: 45%;
+    left: 77%;
+*/
     transform: rotate(20deg);
   }
     
@@ -1434,8 +2176,8 @@ transform: rotate(-70deg);
 .foxleader.p7.on {
     font-size: 1rem;
     transform: rotate(12deg);
-    top: 26%;
-    left: 71%;
+    top: 43%;
+    left: 73%;
     
     animation-name: p7position;
     animation-duration: 1s;
@@ -1447,7 +2189,7 @@ transform: rotate(-70deg);
 .p7.on span:nth-of-type(1) {
     top: -3rem;
     opacity: 1;
-    transition: 0s;
+    transition: 0s 0s;
     transform: rotate(-30deg);
     
     display: block;
@@ -1472,11 +2214,10 @@ transform: rotate(-70deg);
 
 .p7.on span:nth-of-type(2) {
     opacity: 1;
-    transition: 0s .4s;
-    transition: 0s;
+    transition: 0s 0s;
     top: -3rem;
     transform: rotate(-30deg);
-    padding-left: 9rem;
+    padding-left: 5.5rem;
     
     display: block;
     transform-origin: left;
@@ -1501,11 +2242,10 @@ transform: rotate(-70deg);
 
 .p7.on span:nth-of-type(3) {
     opacity: 1;
-    transition: 0s .5s;
-    transition: 0s;
+    transition: 0s .6s;
     top: -3rem;
     transform: rotate(-30deg);
-    padding-left: 6rem;
+    padding-left: 9rem;
     
     display: block;
     transform-origin: left;
@@ -1515,7 +2255,6 @@ transform: rotate(-70deg);
 .p7.on span:nth-of-type(4) {
     opacity: 1;
     transition: 0s .7s;
-    transition: 0s;
     transform: rotate(30deg);
     top: 2rem;
     
@@ -1542,8 +2281,7 @@ transform: rotate(-70deg);
 
 .p7.on span:nth-of-type(5) {
     opacity: 1;
-    transition: 0s 1.1s;
-    transition: 0s;
+    transition: 0s .8s;
     transform: rotate(30deg);
     top: 2rem;
    padding-left: 3rem;
@@ -1555,8 +2293,7 @@ transform: rotate(-70deg);
 
 .p7.on span:nth-of-type(6) {
     opacity: 1;
-    transition: 0s 1.1s;
-    transition: 0s;
+    transition: 0s 1s;
     transform: rotate(30deg);
     top: 2rem;
     padding-left: 5.5rem;
@@ -1568,8 +2305,7 @@ transform: rotate(-70deg);
 
 .p7.on span:nth-of-type(7) {
     opacity: 1;
-    transition: 0s 1.1s;
-    transition: 0s;
+    transition: 0s 1.2s;
     transform: rotate(80deg);
     left: -3rem;
     top: 4rem;
@@ -1585,41 +2321,418 @@ transform: rotate(-70deg);
  0% {
     top: 37%;
     left: 42%;
-    transform: rotateX(-0deg) rotateY(82deg) rotateZ(353deg);
+    transform: rotateX(-0deg) rotateY(82deg) rotateZ(-5deg);
   }
-
-    99% {
+    
+    85% {
         opacity: 1;
+    }
+
+    86% {
+        opacity: 0;
     }
     
     100% {
-    opacity: 0;
     top: 82%;
     left: 33%;
-        transform: rotateX(-52deg) rotateY(14deg) rotateZ(17deg) scale(2);
+        transform: rotateX(-52deg) rotateY(14deg) rotateZ(24deg) scale(2);
+        opacity: 0
+  }
+}
+
+@keyframes p8position2 {
+ 0% {
+        top: 68%;
+    left: 10%;
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(1deg) scale(1);
+  }
+    
+    100% {
+        top: 90%;
+    left: -4%;
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(1deg) scale(1.5);
   }
 }
 
 .soldier1 {    
-       font-family: "Brenner sans condensed";
+       font-family: "Brenner Mono";
     font-style: normal;
     font-weight: 800;
-    text-transform: uppercase;
+    text-transform: lowercase;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
+/*
 .soldier1.p8.on {    
      top: 37%;
     left: 42%;
-    transform: rotateX(-0deg) rotateY(82deg) rotateZ(353deg);
+    transform: rotateX(-0deg) rotateY(82deg) rotateZ(-5deg);
     
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-name: p8position;
     animation-fill-mode:forwards;
-    animation-timing-function: linear; 
+    animation-timing-function: ease-in-out; 
+}
+*/
+
+.soldier1.p8.on {    
+        top: 68%;
+    left: 10%;
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(1deg);
+    transform-origin: center;
+    
+    animation-duration: 1.5s;
+    animation-name: p8position2;
+    animation-fill-mode:forwards;
+    animation-timing-function: ease-in; 
 }
 
+
+.p8.on span:nth-of-type(1) {
+transition: 0s 0s;
+}
+
+.p8.on span:nth-of-type(2) {
+transition: 0s .2s;
+}
+
+.p8.on span:nth-of-type(3) {
+transition: 0s .4s;
+}
+
+.p8.on span:nth-of-type(4) {
+transition: 0s .5s;
+}
+.p8.on span:nth-of-type(5) {
+transition: 0s .6s;
+}
 .p8.on span:nth-of-type(6) {
 display: block;
+    transition: 0s .8s;
 }
+.p8.on span:nth-of-type(7) {
+transition: 0s 1s;
+}
+
+/*Ready for seismic charges.*/
+
+.victor.p9 {
+        top: 30%;
+    left: 10%;
+}
+
+.p9.on span {
+    margin-bottom: 2rem;
+}
+
+.p9.on span:nth-of-type(1) {
+    opacity: 1;
+    transition: 0s 0s;
+    display: inline-block;
+    position: relative;
+}
+
+.p9.on span:nth-of-type(1)::after {
+    content: "Ready";
+        top: .3rem;
+    left: .3rem;
+    position: absolute;
+    color: #FCDD4F;
+    z-index: -1;
+}
+
+.p9.on span:nth-of-type(2) {
+    opacity: 1;
+    transition: 0s .2s;
+    display: inline-block;
+    position: relative;
+}
+
+.p9.on span:nth-of-type(2)::after {
+    content: "for";
+        top: .3rem;
+    left: .3rem;
+    position: absolute;
+    color: #FCDD4F;
+    z-index: -1;
+}
+
+.p9.on span:nth-of-type(3) {
+    opacity: 1;
+    transition: 0s .4s;
+    display: block;
+        position: relative;
+}
+
+.p9.on span:nth-of-type(3)::after {
+    content: "seismic";
+    font-size: 5rem;
+    top: -1rem;
+    left: -3.5rem;
+    position: absolute;
+    color: #FCDD4F;
+    z-index: -1;
+}
+
+.p9.on span:nth-of-type(4) {
+    opacity: 1;
+    transition: 0s .6s;
+    display: inline-block;
+    position: relative;
+}
+
+.p9.on span:nth-of-type(4)::after {
+    content: "charges";
+        top: .3rem;
+    left: .3rem;
+    position: absolute;
+    color: #FCDD4F;
+    z-index: -1;
+}
+
+/*Fox Group, let it fly.*/
+
+.foxleader.p10 {    
+    transform: rotate(40deg);
+    top: 25%;
+    left: 13%;
+    font-size: 1rem;
+}
+
+.p10.on span:nth-of-type(1) {
+    top: -3rem;
+    opacity: 1;
+    transition: 0s 0s;
+    color: #FCDD4F;
+    transform: rotate(-30deg);
+    color: white;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+}
+
+.p10.on span:nth-of-type(1)::after {
+    content: url('../images/Thunder-yellow.svg');
+    width: 1.5rem;
+    position: absolute;
+    top: -4rem;
+    transform: rotate(70deg);
+    transform-origin: center;
+    
+    animation-duration: .1s;
+    animation-name: rotate1;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.p10.on span:nth-of-type(2) {
+    opacity: 1;
+    transition: 0s 0s;
+    top: -3rem;
+    transform: rotate(-30deg);
+    padding-left: 2.5rem;
+    color: white;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+}
+
+.p10.on span:nth-of-type(2)::after {
+    content: url('../images/Extralongtriangle-yellow.svg');
+    width: 1rem;
+    position: absolute;
+    top:  1rem;
+    left: 1rem;
+    transform-origin: center;
+    transform: rotate(120deg);
+    
+    animation-duration: .2s;
+    animation-name: rotate2;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.p10.on span:nth-of-type(3) {
+    opacity: 1;
+    transition: 0s .6s;
+    transform: rotate(30deg);
+    top: 2rem;
+    color: white;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+}
+
+.p10.on span:nth-of-type(3)::after {
+    content: url('../images/Extratriangle-yellow.svg');
+    width: 1rem;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+    transform-origin: center;
+    transform: rotate(120deg);
+    
+    animation-duration: .1s;
+    animation-name: rotate2;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.p10.on span:nth-of-type(4) {
+    opacity: 1;
+    transition: 0s .8s;
+        transform: rotate(30deg);
+    top: 2rem;
+    padding-left: 2.5rem;
+    color: white;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+}
+
+.p10.on span:nth-of-type(5) {
+    opacity: 1;
+    transition: 0s 1s;
+    transform: rotate(30deg);
+    top: 2rem;
+    padding-left: 4.75rem;
+    color: white;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+}
+
+/*Whoooo hooooo*/
+
+@keyframes p11position {
+    0% {
+    transform: rotate(20deg);
+    top: 62%;
+    left: 72%;
+    }
+    
+    50% {
+    transform: rotate(25deg);
+    top: 62%;
+    left: 68%;
+    }
+    
+    100% {
+    transform: rotate(45deg);
+    top: 54%;
+    left: 68%;
+    }
+}
+
+@keyframes p11letter {
+    0% {
+    font-size: 1rem;
+    }
+    
+    100% {
+    font-size: 1.5rem;
+    }
+}
+
+.foxthree.p11.on {
+    font-size: 1rem;
+    transform: rotate(20deg);
+    top: 62%;
+    left: 72%;
+    
+    animation-name: p11position;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+}
+
+.p11.on span:nth-of-type(1) {
+    top: -3rem;
+    opacity: 1;
+    transition: 0s 0s;
+    transform: rotate(-30deg);
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+    
+    animation-name: p11letter;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.p11.on span:nth-of-type(1)::after {
+    content: url('../images/Thunder-white.svg');
+    width: 1.5rem;
+    position: absolute;
+    top: -4rem;
+    transform: rotate(70deg);
+    transform-origin: center;
+    
+    animation-duration: .1s;
+    animation-name: rotate1;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.p11.on span:nth-of-type(2) {
+     color: transparent;
+    opacity: 1;
+    transition: 0s 0s;
+    top: -3rem;
+    transform: rotate(-30deg);
+    padding-left: 3.5rem;
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+    
+    animation-name: p11letter;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.p11.on span:nth-of-type(2)::after {
+    content: url('../images/Extralongtriangle-white.svg');
+    width: 1rem;
+    position: absolute;
+    top:  1rem;
+    left: 1rem;
+    transform-origin: center;
+    transform: rotate(120deg);
+    
+    animation-duration: .2s;
+    animation-name: rotate2;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+.p11.on span:nth-of-type(3) {
+    opacity: 1;
+    transition: 0s .6s;
+    top: 2rem;
+    transform: rotate(30deg);
+    
+    display: block;
+    transform-origin: left;
+    position: absolute;
+    
+    animation-name: p11letter;
+    animation-duration: .5s;
+    animation-delay: .8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+

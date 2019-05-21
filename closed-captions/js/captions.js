@@ -9,11 +9,11 @@ captions[5] = ['98.469','100.300'];
 captions[6] = ['100.962','102.000'];
 // Everyone else, stay with the team leader.
 captions[7] = ['102.999','104.450'];
-captions[8] = ['107.502','110.422'];
+captions[8] = ['107.502','109.00'];
 captions[9] = ['132.06','133.88'];
 // Fox Group, let it fly.
 captions[10] = ['137.95','140.064'];
-captions[11] = ['144.500','146.500'];
+captions[11] = ['144.500','148.000'];
 captions[12] = ['148.059','151.746'];
 captions[13] = ['153.548','155.622'];
 // The seismic response is incredible.
