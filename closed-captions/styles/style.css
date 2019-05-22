@@ -697,7 +697,7 @@ Feel free to adjust the defaults to your needs.
     animation-name: snd12rotate;
     animation-timing-function: linear;
     animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 10;
     animation-fill-mode: forwards;
 }
 
@@ -877,7 +877,7 @@ Feel free to adjust the defaults to your needs.
 
 .snd15 h3:nth-of-type(2) {
     font-size: 2rem;
-    color: #0E3A7F;
+    color: #FF1921;
 }
 
 .snd15 h3:nth-of-type(3) {
@@ -885,7 +885,7 @@ Feel free to adjust the defaults to your needs.
 }
 
 .snd15 h3:nth-of-type(1)::after {
-        content: url(../images/Thunder-extra-yellow.svg);
+        content: url(../images/Thunder-extra-rood2.svg);
     width: 2.5rem;
     position: absolute;
     top: -3rem;
@@ -900,7 +900,7 @@ Feel free to adjust the defaults to your needs.
 }
 
 .snd15 h3:nth-of-type(2)::after {
-    content: url(../images/Thunder-yellow.svg);
+    content: url(../images/Thunder-rood2.svg);
     width: 1.5rem;
     position: absolute;
     top: -1rem;
@@ -915,7 +915,7 @@ Feel free to adjust the defaults to your needs.
 }
 
 .snd15 h3:nth-of-type(3)::after {
-        content: url(../images/Thunder-extra-yellow.svg);
+        content: url(../images/Thunder-extra-rood2.svg);
     width: 2.5rem;
     position: absolute;
     top: 1.5rem;
@@ -939,7 +939,7 @@ Feel free to adjust the defaults to your needs.
 }
 
 .snd16 h3:nth-of-type(2) {
-    color: #FCDD4F;
+    color: #FF1921;
 }
 
 .snd16 h3:nth-of-type(1)::after {
