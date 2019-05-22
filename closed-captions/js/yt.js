@@ -4,6 +4,7 @@ var headerSection1 = document.querySelector('header section:nth-of-type(1)');
 var headerSection2 = document.querySelector('header section:nth-of-type(2)');
 
 var player;
+var screenWidth = screen.width;
 
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
@@ -30,6 +31,13 @@ function onYouTubeIframeAPIReady() {
         headerSection2.classList.add("headerdisappear2");
     }
 );
+    
+    window.addEventListener("resize", function(event) {
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+        if (document.body.clientWidth < 720) {
+        player.pauseVideo(); }
+    
+})
 
 }
 

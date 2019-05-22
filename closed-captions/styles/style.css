@@ -254,6 +254,52 @@ header button:focus {
     /*    z-index: -10;*/
 }
 
+main {
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    background-image: url(../images/Kong.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 10rem;
+    background-size: 24vw;
+}
+
+main > section {
+    display: block;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+main > section > article {
+    color: #FF1921;
+    text-align: center;
+    margin: 1rem;
+}
+
+main > section > article p {
+    font-family: "Brenner Sans Condensed";
+    font-style: normal;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+main p, main h1 {
+    color: #FF1921;
+}
+
+main h1 {
+    font-size: 24vw;
+}
+
 /* **********************************************
 Basic mechanics
 Hide all paragraphs by default
@@ -2734,5 +2780,15 @@ transition: 0s 1s;
     animation-delay: .8s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 45em) { 
+    #closed-captions, video-placeholder {
+display: none;
+    }
+    
+    main {
+    display: block;
+    }
 }
 
