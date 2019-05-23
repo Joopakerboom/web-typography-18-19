@@ -1273,7 +1273,7 @@ body.sound3 #closed-captions > section .snd3 {
     transform: rotateX(10deg) rotateY(-30deg) rotateZ(0deg);
 
     animation-name: dissapear;
-    animation-delay: 1s;
+    animation-delay: 1.4s;
     animation-duration: 0s;
     animation-fill-mode: forwards;
 }
@@ -1502,7 +1502,7 @@ body.sound15 #closed-captions > section .snd15 {
     transform-origin: left;
     text-align: center;
 
-    animation: dissapear 0s linear 1s, snd15position 1s linear 0s;
+    animation: dissapear 0s linear .8s, snd15position 1s linear 0s;
     animation-fill-mode: forwards;
 }
 
